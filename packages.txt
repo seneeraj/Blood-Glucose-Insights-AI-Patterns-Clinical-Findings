@@ -1,5 +1,2 @@
-git add packages.txt
-git commit -m "Add Tesseract dependency"
-git push
 tesseract-ocr
 libgl1
