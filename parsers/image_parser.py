@@ -4,9 +4,6 @@ import pandas as pd
 import re
 from datetime import datetime
 
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-
-
 def parse_image(file):
 
     image = Image.open(file).convert("L")
