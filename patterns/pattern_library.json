@@ -1,0 +1,53 @@
+{
+  "patterns":[
+
+{"id":"breakfast_spike_severe","name":"Severe Breakfast Spike","category":"Meal Response","diagnosis_group":"Meal Spike","rule":"AB - BB > 120","severity":0.9,"clinical_weight":0.9,"description":"Large glucose spike after breakfast"},
+{"id":"breakfast_spike_moderate","name":"Moderate Breakfast Spike","category":"Meal Response","diagnosis_group":"Meal Spike","rule":"AB - BB > 80","severity":0.7,"clinical_weight":0.8,"description":"Moderate breakfast glucose spike"},
+{"id":"lunch_spike_severe","name":"Severe Lunch Spike","category":"Meal Response","diagnosis_group":"Meal Spike","rule":"AL - BL > 120","severity":0.9,"clinical_weight":0.8,"description":"Large spike after lunch"},
+{"id":"lunch_spike_moderate","name":"Moderate Lunch Spike","category":"Meal Response","diagnosis_group":"Meal Spike","rule":"AL - BL > 80","severity":0.7,"clinical_weight":0.7,"description":"Moderate spike after lunch"},
+{"id":"dinner_spike_severe","name":"Severe Dinner Spike","category":"Meal Response","diagnosis_group":"Meal Spike","rule":"AD - BD > 120","severity":0.9,"clinical_weight":0.8,"description":"Large spike after dinner"},
+{"id":"dinner_spike_moderate","name":"Moderate Dinner Spike","category":"Meal Response","diagnosis_group":"Meal Spike","rule":"AD - BD > 80","severity":0.7,"clinical_weight":0.7,"description":"Moderate spike after dinner"},
+
+{"id":"post_breakfast_hyperglycemia","name":"Post Breakfast Hyperglycemia","category":"Meal Response","diagnosis_group":"Hyperglycemia","rule":"AB > 200","severity":0.8,"clinical_weight":0.9,"description":"High glucose after breakfast"},
+{"id":"post_lunch_hyperglycemia","name":"Post Lunch Hyperglycemia","category":"Meal Response","diagnosis_group":"Hyperglycemia","rule":"AL > 200","severity":0.8,"clinical_weight":0.9,"description":"High glucose after lunch"},
+{"id":"post_dinner_hyperglycemia","name":"Post Dinner Hyperglycemia","category":"Meal Response","diagnosis_group":"Hyperglycemia","rule":"AD > 200","severity":0.8,"clinical_weight":0.9,"description":"High glucose after dinner"},
+
+{"id":"fasting_hyperglycemia","name":"Fasting Hyperglycemia","category":"Glucose Control","diagnosis_group":"Hyperglycemia","rule":"BB > 130","severity":0.8,"clinical_weight":0.9,"description":"Elevated fasting glucose"},
+{"id":"persistent_hyperglycemia","name":"Persistent Hyperglycemia","category":"Glucose Control","diagnosis_group":"Hyperglycemia","rule":"daily_mean > 180","severity":0.85,"clinical_weight":0.9,"description":"Glucose remains elevated most of day"},
+{"id":"severe_hyperglycemia","name":"Severe Hyperglycemia","category":"Glucose Control","diagnosis_group":"Hyperglycemia","rule":"daily_max > 300","severity":0.95,"clinical_weight":0.95,"description":"Extremely high glucose reading"},
+{"id":"extreme_hyperglycemia","name":"Extreme Hyperglycemia","category":"Glucose Control","diagnosis_group":"Hyperglycemia","rule":"daily_max > 400","severity":1.0,"clinical_weight":0.95,"description":"Very dangerous glucose spike"},
+{"id":"normal_glucose_control","name":"Normal Glucose Control","category":"Glucose Control","diagnosis_group":"Glucose Control","rule":"daily_mean < 140","severity":0.3,"clinical_weight":0.6,"description":"Glucose generally controlled"},
+{"id":"borderline_control","name":"Borderline Glucose Control","category":"Glucose Control","diagnosis_group":"Glucose Control","rule":"daily_mean >= 140 and daily_mean <= 180","severity":0.5,"clinical_weight":0.6,"description":"Borderline glucose control"},
+
+{"id":"high_variability","name":"High Glycemic Variability","category":"Variability","diagnosis_group":"Variability","rule":"std_glucose > 60","severity":0.8,"clinical_weight":0.9,"description":"Large glucose fluctuations"},
+{"id":"extreme_variability","name":"Extreme Glycemic Variability","category":"Variability","diagnosis_group":"Variability","rule":"std_glucose > 100","severity":0.95,"clinical_weight":0.95,"description":"Extremely unstable glucose"},
+{"id":"moderate_variability","name":"Moderate Variability","category":"Variability","diagnosis_group":"Variability","rule":"std_glucose > 40","severity":0.6,"clinical_weight":0.7,"description":"Moderate glucose variability"},
+{"id":"stable_glucose","name":"Stable Glucose","category":"Variability","diagnosis_group":"Variability","rule":"std_glucose < 30","severity":0.3,"clinical_weight":0.5,"description":"Stable glucose pattern"},
+{"id":"wide_glucose_range","name":"Wide Glucose Range","category":"Variability","diagnosis_group":"Variability","rule":"daily_max - daily_min > 200","severity":0.75,"clinical_weight":0.8,"description":"Large daily glucose range"},
+{"id":"extreme_range","name":"Extreme Glucose Range","category":"Variability","diagnosis_group":"Variability","rule":"daily_max - daily_min > 300","severity":0.9,"clinical_weight":0.9,"description":"Extreme glucose variation"},
+
+{"id":"morning_hyperglycemia","name":"Morning Hyperglycemia","category":"Time-of-Day","diagnosis_group":"Hyperglycemia","rule":"BB > 180","severity":0.7,"clinical_weight":0.8,"description":"High glucose before breakfast"},
+{"id":"afternoon_hyperglycemia","name":"Afternoon Hyperglycemia","category":"Time-of-Day","diagnosis_group":"Hyperglycemia","rule":"BL > 180","severity":0.7,"clinical_weight":0.8,"description":"High glucose before lunch"},
+{"id":"evening_hyperglycemia","name":"Evening Hyperglycemia","category":"Time-of-Day","diagnosis_group":"Hyperglycemia","rule":"BD > 180","severity":0.7,"clinical_weight":0.8,"description":"High glucose before dinner"},
+{"id":"night_hyperglycemia","name":"Night Hyperglycemia","category":"Time-of-Day","diagnosis_group":"Hyperglycemia","rule":"AD > 200","severity":0.7,"clinical_weight":0.8,"description":"High glucose after dinner"},
+
+{"id":"dawn_phenomenon","name":"Possible Dawn Phenomenon","category":"Insulin Pattern","diagnosis_group":"Insulin Pattern","rule":"BB > BD","severity":0.7,"clinical_weight":0.9,"description":"Morning glucose higher than previous night"},
+{"id":"somogyi_effect","name":"Possible Somogyi Effect","category":"Insulin Pattern","diagnosis_group":"Insulin Pattern","rule":"BB > 180 and AD < 120","severity":0.8,"clinical_weight":0.9,"description":"Night low followed by morning high"},
+{"id":"basal_insulin_insufficient","name":"Basal Insulin Insufficient","category":"Insulin Pattern","diagnosis_group":"Insulin Pattern","rule":"BL > BB and BD > BL","severity":0.8,"clinical_weight":0.9,"description":"Glucose rising between meals"},
+{"id":"basal_insulin_excess","name":"Basal Insulin Excess","category":"Insulin Pattern","diagnosis_group":"Insulin Pattern","rule":"BB < 80","severity":0.7,"clinical_weight":0.8,"description":"Possible basal insulin excess"},
+{"id":"insulin_resistance_pattern","name":"Insulin Resistance Pattern","category":"Insulin Pattern","diagnosis_group":"Insulin Pattern","rule":"AB > 200 and AL > 200","severity":0.8,"clinical_weight":0.9,"description":"High post-meal glucose across meals"},
+
+{"id":"hypoglycemia_risk","name":"Hypoglycemia Risk","category":"Risk","diagnosis_group":"Hypoglycemia","rule":"daily_min < 70","severity":0.9,"clinical_weight":0.95,"description":"Low glucose reading detected"},
+{"id":"severe_hypoglycemia_risk","name":"Severe Hypoglycemia Risk","category":"Risk","diagnosis_group":"Hypoglycemia","rule":"daily_min < 55","severity":1.0,"clinical_weight":0.95,"description":"Very low glucose reading"},
+{"id":"hypoglycemia_pattern","name":"Frequent Hypoglycemia","category":"Risk","diagnosis_group":"Hypoglycemia","rule":"daily_min < 70","severity":0.85,"clinical_weight":0.9,"description":"Repeated low glucose pattern"},
+
+{"id":"trend_rising_glucose","name":"Rising Glucose Trend","category":"Trend","diagnosis_group":"Trend Pattern","rule":"daily_mean > 160","severity":0.7,"clinical_weight":0.7,"description":"Overall rising glucose trend"},
+{"id":"trend_falling_glucose","name":"Improving Glucose Trend","category":"Trend","diagnosis_group":"Trend Pattern","rule":"daily_mean < 140","severity":0.4,"clinical_weight":0.6,"description":"Improving glucose trend"},
+{"id":"weekend_pattern","name":"Weekend Pattern","category":"Trend","diagnosis_group":"Trend Pattern","rule":"daily_mean > 170","severity":0.5,"clinical_weight":0.6,"description":"Possible weekend glucose increase"},
+
+{"id":"meal_carryover_effect","name":"Meal Carry-over Effect","category":"Meal Response","diagnosis_group":"Meal Spike","rule":"BL > 180 and BD > 180","severity":0.7,"clinical_weight":0.8,"description":"High glucose persists between meals"},
+{"id":"delayed_meal_spike","name":"Delayed Meal Spike","category":"Meal Response","diagnosis_group":"Meal Spike","rule":"AL > AB","severity":0.6,"clinical_weight":0.7,"description":"Delayed spike after lunch"},
+{"id":"evening_spike_pattern","name":"Evening Spike Pattern","category":"Meal Response","diagnosis_group":"Meal Spike","rule":"AD > AL","severity":0.7,"clinical_weight":0.7,"description":"Dinner spike larger than lunch spike"}
+
+  ]
+}
